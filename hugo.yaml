@@ -1,0 +1,86 @@
+baseURL: /
+title: Envelope Zero
+contentDir: content/en
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+enableMissingTranslationPlaceholders: true
+enableRobotsTXT: true
+enableGitInfo: true
+# taxonomies:
+#   tag: tags
+#  category: categories
+params:
+  version_menu: Releases
+  archived_version: false
+  # url_latest_version: ""
+  github_repo: "https://github.com/envelope-zero/docs"
+  # github_project_repo: ""
+  github_branch: main
+  algolia_docsearch: false
+  offlineSearch: true
+  prism_syntax_highlighting: false
+  ui:
+    breadcrumb_disable: false
+    footer_about_disable: true
+    navbar_logo: true
+    navbar_translucent_over_cover_disable: false
+    sidebar_menu_compact: false
+    sidebar_search_disable: false
+    feedback:
+      enable: false
+    readingtime:
+      enable: false
+  links:
+    # user:
+    #   - name: User mailing list
+    #     url: "https://example.org/mail"
+    #     icon: fa fa-envelope
+    #     desc: Discussion and help from your fellow users
+    developer:
+      - name: GitHub
+        url: "https://github.com/envelope-zero"
+        icon: fab fa-github
+        desc: Development takes place here!
+      - name: RSS
+        url: "/index.xml"
+        icon: fa-sharp fa-solid fa-square-rss
+        desc: Subscribe to the RSS feed
+permalinks:
+  blog: "/:section/:year/:month/:day/:slug/"
+imaging:
+  resampleFilter: CatmullRom
+  quality: 75
+  anchor: smart
+languages:
+  en:
+    title: Envelope Zero
+    languageName: English
+    weight: 1
+    params:
+      description: Zero-based budgeting using the envelope method
+  # de:
+  #   title: Envelope Zero
+  #   languageName: Deutsch
+  #   weight: 2
+  #   params:
+  #     description: Zero-base Budgetierung mit der Envelope-Methode
+  #     time_format_blog: 02.01.2006
+  #     time_format_default: 02.01.2006
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: tango
+module:
+  hugoVersion:
+    extended: true
+    min: 0.75.0
+  imports:
+    - path: github.com/google/docsy
+      disable: false
+    - path: github.com/google/docsy/dependencies
+      disable: false
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
