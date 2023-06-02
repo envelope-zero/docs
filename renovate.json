@@ -1,0 +1,43 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all",
+    ":ignoreModulesAndTests"
+  ],
+  "dependencyDashboard": true,
+  "pre-commit": {
+    "enabled": true
+  },
+  "labels": ["renovate"],
+  "rangeStrategy": "pin",
+  "rebaseWhen": "behind-base-branch",
+  "semanticCommits": "enabled",
+  "platformAutomerge": true,
+  "postUpdateOptions": ["gomodTidy"],
+  "regexManagers": [
+    {
+      "description": "Upgrade prettier dependencies in .pre-commit-config.yaml",
+      "fileMatch": ["^.pre-commit-config.yaml"],
+      "matchStrings": [
+        "# renovate:\\sdatasource=(?<datasource>.*?)\\sdepName=(?<depName>.*?)\\s.*@(?<currentValue>.*)"
+      ]
+    },
+    {
+      "description": "Upgrade hugo version in GitHub workflows",
+      "fileMatch": ["(^workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
+      "matchStrings": ["hugo-version: \"(?<currentValue>.*)\""],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "gohugoio/hugo"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "Remove leading v from hugo version",
+      "extractVersion": "^v(?<version>)",
+      "matchDatasources": ["github-releases"],
+      "matchPackageNames": ["gohugoio/hugo"]
+    }
+  ]
+}
