@@ -22,9 +22,9 @@ You can always switch between the two different installation methods
 
 The **standalone** version is one file that you can execute on your computer like any other program. If you do not want to bother with setting up your own infrastructure or just want to do a quick test of Envelope Zero, we recommend the **standalone** version.
 
-With the **services** version, the frontend (your User Interface) and the backend (the API and database) run as two separate services. This allows you to use Envelope Zero from any computer in the connected network. This is an
+With the **services** version, the frontend (your User Interface) and the backend (the API and database) run as two separate services. This allows you to use Envelope Zero from any computer in the connected network.
 
-**Note**: Envelope Zero currently features **no access control mechanism**. Anyone on your network will be able to access it if you do not add e.g. HTTP Basic Authentication in front of it. If you are unsure what this means, we recommend to use the **standalone** version for now.
+**Note**: The **services** version currently features **no access control mechanism**. Anyone on your network will be able to access it if you do not add e.g. HTTP Basic Authentication in front of it. If you are unsure what this means, we recommend to use the **standalone** version for now.
 
 ## Standalone
 
