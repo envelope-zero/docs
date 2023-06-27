@@ -5,3 +5,7 @@ setup: setup-ci
 .PHONY: setup-ci
 setup-ci:
 	npm install
+
+.PHONY: run
+run:
+	hugo serve

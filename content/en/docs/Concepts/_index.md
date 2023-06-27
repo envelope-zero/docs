@@ -1,9 +1,9 @@
 ---
 title: "Concepts"
 linkTitle: "Concepts"
-weight: 4
+weight: 2
 description: >
-  About envelope and zero-based budgeting
+  About envelope and zero-based budgeting. This part of the documentation is aimed at users
 ---
 
 {{% pageinfo %}}

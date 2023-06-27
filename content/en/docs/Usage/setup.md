@@ -1,9 +1,6 @@
 ---
-categories: ["Examples", "Placeholders"]
-tags: ["test", "docs"]
-title: "Getting Started"
-linkTitle: "Getting Started"
-weight: 2
+title: "Setup"
+weight: 1
 description: >
   How to install and open Envelope Zero
 ---
