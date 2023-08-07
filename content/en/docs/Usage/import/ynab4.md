@@ -4,8 +4,6 @@ description: >
   How to import a budget from YNAB 4
 ---
 
-## YNAB 4
-
 You can import a YNAB 4 budget directly into Envelope Zero. Please read this whole section carefully before you do so.
 
 ### Notable differences
