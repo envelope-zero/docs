@@ -4,7 +4,8 @@
     "group:recommended",
     "replacements:all",
     "workarounds:all",
-    ":ignoreModulesAndTests"
+    ":ignoreModulesAndTests",
+    "regexManagers:githubActionsVersions"
   ],
   "dependencyDashboard": true,
   "pre-commit": {
@@ -16,15 +17,6 @@
   "semanticCommits": "enabled",
   "platformAutomerge": true,
   "postUpdateOptions": ["gomodTidy"],
-  "regexManagers": [
-    {
-      "description": "Upgrade hugo version in GitHub workflows",
-      "fileMatch": ["(^workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
-      "matchStrings": ["hugo-version: \"(?<currentValue>.*)\""],
-      "datasourceTemplate": "github-releases",
-      "depNameTemplate": "gohugoio/hugo"
-    }
-  ],
   "packageRules": [
     {
       "description": "Remove leading v from hugo version",
