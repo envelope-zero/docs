@@ -1,0 +1,28 @@
+---
+title: "API"
+description: >
+  This document contains the API design. It is aimed at developers and to support administrators in debugging issues.
+---
+
+## Generated API documentation
+
+The backend has automatically generated API documentation available at `/docs/index.html`.
+
+## High level guarantees
+
+- Any resource will be available at the endpoints `/{resource}` for the collection and `/{resource}/{id}` for a single resource.
+- Filtering on collection endpoints is implemented with URL parameters (“query strings“)
+- All endpoints support the `OPTIONS` HTTP method to be [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) compliant. Use the `OPTIONS` method to discover available HTTP options endpoint
+- Collections **should** always support the HTTP methods `GET` (read resources) and `POST` (create new resource). This might be different for new API versions that do not support all methods yet, but will always be true for the oldest available API version.
+- Resources **should** support the HTTP methods `GET` (read resource), `PATCH` (update resource) and `DELETE` (delete resource). This might be different for new API versions that do not support all methods yet, but will always be true for the oldest available API version.
+
+## Resources
+
+All resources share the following **read only** attributes:
+
+- `createdAt` (string): An RFC3339 timestamp of the time when the resource was created.
+- `updatedAt` (string): An RFC3339 timestamp of the time when the resource was updated.
+- `deletedAt` (string): An RFC3339 timestamp of the time when the resource was deleted. Can be null.
+- `id` (string): The UUID of the object.
+- `links` (object): A map of related resources.
+  - `self` (string): The full URL of the resource itself.
