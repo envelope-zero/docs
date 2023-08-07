@@ -19,6 +19,12 @@
   "postUpdateOptions": ["gomodTidy"],
   "packageRules": [
     {
+      "description": "Remove leading v from hugo version",
+      "extractVersion": "^v(?<version>.*)",
+      "matchDatasources": ["github-releases"],
+      "matchPackageNames": ["gohugoio/hugo"]
+    },
+    {
       "description": "Automatically merge minor updates",
       "matchManagers": ["github-actions", "gomod", "pre-commit", "regex"],
       "matchUpdateTypes": ["minor", "patch", "digest"],
