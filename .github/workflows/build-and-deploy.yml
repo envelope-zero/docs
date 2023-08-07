@@ -6,6 +6,10 @@ on:
       - main
   pull_request:
 
+env:
+  # renovate: datasource=github-tags depName=gohugoio/hugo
+  HUGO_VERSION: "0.112.7"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,7 +23,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@16361eb4acea8698b220b76c0d4e84e1fd22c61d # v2.6.0
         with:
-          hugo-version: "0.112.7"
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
       - name: Set up dependencies
