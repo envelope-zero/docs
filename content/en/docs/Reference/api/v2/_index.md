@@ -28,4 +28,6 @@ This describes general behavior of all API endpoints
 
 ## Migrating from v1
 
-_All changes are covered in [Changed in v2](#changed-in-v2)_
+_Changes to all endpoints are covered in [Changed in v2](#changed-in-v2)._
+
+For changes to the different resources, check their respective pages.
