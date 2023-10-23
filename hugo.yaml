@@ -83,3 +83,8 @@ module:
       disable: false
 disableKinds:
   - taxonomy
+
+frontmatter:
+  date:
+    # Set the date to the git file date
+    - :git
