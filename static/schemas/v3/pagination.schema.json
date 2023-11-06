@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://envelope-zero.org/schemas/v3/pagination.schema.json",
+  "title": "Pagination",
+  "description": "The pagination information",
+  "type": "object",
+  "required": [
+    "total_records",
+    "current_page",
+    "total_pages",
+    "next_page",
+    "prev_page"
+  ],
+  "properties": {
+    "total_records": {
+      "description": "The total amount of resources for the query",
+      "anyOf": [{ "type": "integer", "minimum": 0 }, { "type": "null" }]
+    },
+    "current_page": {
+      "description": "The page currently viewed",
+      "anyOf": [{ "type": "integer", "minimum": 1 }, { "type": "null" }]
+    },
+    "total_pages": {
+      "description": "The number of pages for the query",
+      "anyOf": [{ "type": "integer", "minimum": 1 }, { "type": "null" }]
+    },
+    "next_page": {
+      "description": "The next page",
+      "anyOf": [{ "type": "integer", "minimum": 2 }, { "type": "null" }]
+    },
+    "prev_page": {
+      "description": "The previous page",
+      "anyOf": [{ "type": "integer", "minimum": 1 }, { "type": "null" }]
+    }
+  }
+}

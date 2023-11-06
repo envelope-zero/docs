@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://envelope-zero.org/schemas/v3/get-collection.schema.json",
+  "title": "HTTP GET - Collection Endpoints",
+  "description": "The HTTP response body for GET collection endpoints",
+  "type": "object",
+  "required": ["data", "error", "pagination"],
+  "properties": {
+    "data": {
+      "description": "List of resources",
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "error": {
+      "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"
+    },
+    "pagination": {
+      "$ref": "https://envelope-zero.org/schemas/v3/pagination.schema.json"
+    }
+  }
+}
