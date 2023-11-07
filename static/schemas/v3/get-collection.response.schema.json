@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://envelope-zero.org/schemas/v3/get-collection.schema.json",
+  "$id": "https://envelope-zero.org/schemas/v3/get-collection.response.schema.json",
   "title": "HTTP GET - Collection Endpoints",
   "description": "The HTTP response body for GET collection endpoints",
   "type": "object",
