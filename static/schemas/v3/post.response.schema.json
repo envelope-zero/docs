@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://envelope-zero.org/schemas/v3/get-collection.schema.json",
-  "title": "HTTP GET - Collection Endpoints",
-  "description": "The HTTP response body for GET collection endpoints",
+  "$id": "https://envelope-zero.org/schemas/v3/post.response.schema.json",
+  "title": "HTTP POST response",
+  "description": "The HTTP response body for POST requests",
   "type": "object",
   "required": ["data", "error"],
   "properties": {

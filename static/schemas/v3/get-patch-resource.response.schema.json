@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://envelope-zero.org/schemas/v3/get-patch-resource.schema.json",
+  "$id": "https://envelope-zero.org/schemas/v3/get-patch-resource.response.schema.json",
   "title": "HTTP GET/PATCH - Resource Endpoint",
   "description": "The HTTP response body for GET/PATCH resource endpoints",
   "type": "object",

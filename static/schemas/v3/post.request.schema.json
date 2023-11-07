@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://envelope-zero.org/schemas/v3/post.request.schema.json",
+  "title": "HTTP POST request",
+  "description": "The HTTP request body for POST requests",
+  "type": "array",
+  "minLength": 1,
+  "items": {
+    "type": "object"
+  }
+}
