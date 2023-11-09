@@ -11,7 +11,6 @@ You can import a YNAB 4 budget directly into Envelope Zero. Please read this who
 The following is **not yet supported** in Envelope Zero and will therefore be ignored:
 
 - Recurring transactions. They will be implemented with [milestone #5](https://github.com/envelope-zero/backend/milestone/5) and import supported with https://github.com/envelope-zero/backend/issues/379.
-- Payee rename rules are not yet supported in Envelope Zero (https://github.com/envelope-zero/backend/issues/373)
 
 The following **work differently** on Envelope Zero:
 
@@ -26,8 +25,8 @@ YNAB 4 saves all data in a file that can be imported directly to Envelope Zero. 
 
 1. Go to the directory where your YNAB 4 budget file is saved. This file is actually a directory, but it claims to be a file. You can enter this directory with
 1. On MacOS: Right click -> Show package content
-1. On Windows: ?
-1. Open the `Budget.ymeta` file with any text editor. This file tells us which directory to look into next. Check the `relativeDataFolderName` string. Open this directory
+   1. On Windows: ?
+   1. Open the `Budget.ymeta` file with any text editor. This file tells us which directory to look into next. Check the `relativeDataFolderName` string. Open this directory
 1. In the directory, you will find another directory with a UUID as name, for example `F90E864E-8D96-4E0E-A723-776CEEB1C2F0`. Open this directory, too.
 1. In there, you will find a Budget.yfull file. This is the one you need, copy it to e.g. your Desktop.
 1. Navigate to your Envelope Zero instance and add a new budget. In the dialog, click "Import an existing budget from YNAB 4 instead" and follow the instructions
