@@ -14,7 +14,7 @@
     "limit": {
       "description": "The limit for the number of results used for this response",
       "type": "integer",
-      "minimum": 0
+      "minimum": -1
     },
     "offset": {
       "description": "The offset of the first resource returned",
