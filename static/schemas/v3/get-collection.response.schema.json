@@ -8,10 +8,15 @@
   "properties": {
     "data": {
       "description": "List of resources",
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        { "type": "null" }
+      ]
     },
     "error": {
       "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"
