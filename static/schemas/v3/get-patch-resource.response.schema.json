@@ -8,7 +8,7 @@
   "properties": {
     "data": {
       "description": "The resource",
-      "type": "object"
+      "oneOf": [{ "type": "object" }, { "type": "null" }]
     },
     "error": {
       "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"

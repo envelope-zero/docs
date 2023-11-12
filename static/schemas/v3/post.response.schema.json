@@ -8,20 +8,25 @@
   "properties": {
     "data": {
       "description": "List of resources",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "properties": {
-          "error": {
-            "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"
-          },
-          "data": {
-            "description": "A single resource",
-            "type": "object"
+      "oneOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "error": {
+                "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"
+              },
+              "data": {
+                "description": "A single resource",
+                "type": "object"
+              }
+            }
           }
-        }
-      }
+        },
+        { "type": "null" }
+      ]
     },
     "error": {
       "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"

@@ -4,27 +4,33 @@
   "title": "Pagination",
   "description": "The pagination information",
   "type": "object",
-  "required": ["count", "limit", "offset", "total"],
-  "properties": {
-    "count": {
-      "description": "The number of results in this response",
-      "type": "integer",
-      "minimum": 0
+  "oneOf": [
+    {
+      "type": "object",
+      "required": ["count", "limit", "offset", "total"],
+      "properties": {
+        "count": {
+          "description": "The number of results in this response",
+          "type": "integer",
+          "minimum": 0
+        },
+        "limit": {
+          "description": "The limit for the number of results used for this response",
+          "type": "integer",
+          "minimum": -1
+        },
+        "offset": {
+          "description": "The offset of the first resource returned",
+          "type": "integer",
+          "minimum": 0
+        },
+        "total": {
+          "description": "Total number of records matching the query",
+          "type": "integer",
+          "minimum": 0
+        }
+      }
     },
-    "limit": {
-      "description": "The limit for the number of results used for this response",
-      "type": "integer",
-      "minimum": -1
-    },
-    "offset": {
-      "description": "The offset of the first resource returned",
-      "type": "integer",
-      "minimum": 0
-    },
-    "total": {
-      "description": "Total number of records matching the query",
-      "type": "integer",
-      "minimum": 0
-    }
-  }
+    { "type": "null" }
+  ]
 }

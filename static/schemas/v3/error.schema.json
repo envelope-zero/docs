@@ -3,5 +3,5 @@
   "$id": "https://envelope-zero.org/schemas/v3/error.schema.json",
   "title": "Error",
   "description": "A human readable error message",
-  "anyOf": [{ "type": "string" }, { "type": "null" }]
+  "oneOf": [{ "type": "string" }, { "type": "null" }]
 }
