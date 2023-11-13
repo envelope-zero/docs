@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://envelope-zero.org/schemas/v3/options.response.schema.json",
+  "title": "HTTP OPTIONS",
+  "description": "The HTTP response body for OPTIONS requests that are not successful",
+  "type": "object",
+  "required": ["error"],
+  "properties": {
+    "error": {
+      "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"
+    }
+  }
+}
