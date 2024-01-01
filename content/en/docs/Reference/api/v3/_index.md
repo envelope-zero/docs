@@ -4,10 +4,6 @@ description: >
   This document describes API version 3
 ---
 
-{{% alert title="Unstable" color="warning" %}}
-API v3 is not yet finalized. The specification will be final when the first backend version with an API v3 endpoint is published.
-{{% /alert %}}
-
 ## General
 
 This describes general behavior of all API endpoints
