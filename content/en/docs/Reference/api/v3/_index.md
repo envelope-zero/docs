@@ -20,6 +20,14 @@ This describes general behavior of all API endpoints
 - `PATCH` endpoints and `GET` resource endpoints return an object with an `error` and a `data` property. If an error ocurred, the `error` property contains a human readable error message intended for the end user. If no error occurs, `error` is null and `data` contains the resource (**changed from v2**)
 - `GET` collection endpoints return an object with an `error` and a `data` property. If an error ocurred, the `error` property contains a human readable error message intended for the end user. If no error occurs, `error` is null and `data` contains an array of objects where each object is a resource (**changed from v2**)
 
+## Modifying resources
+
+When you modify resources with a `PATCH` request, all data that cannot be modified is ignored.
+
+This enables you to read a resource from the API, change the fields that you want to update and send a `PATCH` request to the resources `.links.self` URL with the whole resource.
+
+Of course, you can also just send the modified fields.
+
 ## JSON Schemas
 
 This is a list of all JSON schemas for request and response bodies.

@@ -12,7 +12,7 @@ The backend has automatically generated API documentation available at `/docs/in
 
 - Any resource will be available at the endpoints `/{resource}` for the collection and `/{resource}/{id}` for a single resource.
 - Filtering on collection endpoints is implemented with URL parameters (“query strings“)
-- All endpoints support the `OPTIONS` HTTP method to be [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) compliant. Use the `OPTIONS` method to discover available HTTP options endpoint
+- All endpoints support the `OPTIONS` HTTP method to be [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) compliant. Use the `OPTIONS` method to discover available HTTP methods
 - Collections **should** always support the HTTP methods `GET` (read resources) and `POST` (create new resource). This might be different for new API versions that do not support all methods yet, but will always be true for the oldest available API version.
 - Resources **should** support the HTTP methods `GET` (read resource), `PATCH` (update resource) and `DELETE` (delete resource). This might be different for new API versions that do not support all methods yet, but will always be true for the oldest available API version.
 
@@ -26,3 +26,9 @@ All resources share the following **read only** attributes:
 - `id` (string): The UUID of the object.
 - `links` (object): A map of related resources.
   - `self` (string): The full URL of the resource itself.
+
+## Content transformations
+
+The following transformations will be applied to resources before they are saved:
+
+- All string fields will have whitespace at the beginning and the end of the string trimmed away. For example, if you set an envelope name as `   Test Envelope   `, it will be saved as `Test Envelope`.
