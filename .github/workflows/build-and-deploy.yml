@@ -8,7 +8,7 @@ on:
 
 env:
   # renovate: datasource=github-releases depName=gohugoio/hugo
-  HUGO_VERSION: "0.121.2"
+  HUGO_VERSION: "0.122.0"
 
 jobs:
   build:
