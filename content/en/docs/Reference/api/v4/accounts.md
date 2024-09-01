@@ -1,7 +1,7 @@
 ---
 title: "Accounts"
 description: >
-  This document describes Accounts in API version 2
+  This document describes accounts
 ---
 
 ## Recent Envelopes
@@ -14,6 +14,6 @@ Income transactions are also counted in this list, with income appearing as the 
 
 Use this field to pre-fill the Envelope when creating transactions in a client.
 
-## Migrating from v1
+## Migrating from v2
 
-- The `recentEnvelopes` field is now a list of IDs instead of a list envelope objects. Income is represented by `null`
+_No semantic changes_
