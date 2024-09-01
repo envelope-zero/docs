@@ -7,7 +7,7 @@ description: >
 ---
 
 {{% pageinfo %}}
-This page will be expanded soon.
+This page will is incomplete and needs to be expanded.
 {{% /pageinfo %}}
 
 Envelope Zero has two core principles. It is a

@@ -13,8 +13,8 @@ The backend has automatically generated API documentation available at `/docs/in
 - Any resource will be available at the endpoints `/{resource}` for the collection and `/{resource}/{id}` for a single resource.
 - Filtering on collection endpoints is implemented with URL parameters (“query strings“)
 - All endpoints support the `OPTIONS` HTTP method to be [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) compliant. Use the `OPTIONS` method to discover available HTTP methods
-- Collections **should** always support the HTTP methods `GET` (read resources) and `POST` (create new resource). This might be different for new API versions that do not support all methods yet, but will always be true for the oldest available API version.
-- Resources **should** support the HTTP methods `GET` (read resource), `PATCH` (update resource) and `DELETE` (delete resource). This might be different for new API versions that do not support all methods yet, but will always be true for the oldest available API version.
+- Collections support the HTTP methods `GET` (read resources) and `POST` (create new resource). **Note**: The newest API version might not yet support all methods for all endpoints. In this case, you can use an older API version if necessary.
+- Resources support the HTTP methods `GET` (read resource), `PATCH` (update resource) and `DELETE` (delete resource). **Note**: The newest API version might not yet support all methods for all endpoints. In this case, you can use an older API version if necessary.
 
 ## Resources
 
