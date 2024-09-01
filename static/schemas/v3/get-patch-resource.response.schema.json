@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://envelope-zero.org/schemas/v4/get-patch-resource.response.schema.json",
+  "$id": "https://envelope-zero.org/schemas/v3/get-patch-resource.response.schema.json",
   "title": "HTTP GET/PATCH - Resource Endpoint",
   "description": "The HTTP response body for GET/PATCH resource endpoints",
   "type": "object",
@@ -11,7 +11,7 @@
       "oneOf": [{ "type": "object" }, { "type": "null" }]
     },
     "error": {
-      "$ref": "https://envelope-zero.org/schemas/v4/error.schema.json"
+      "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"
     }
   }
 }

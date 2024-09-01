@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://envelope-zero.org/schemas/v4/error.schema.json",
+  "$id": "https://envelope-zero.org/schemas/v3/error.schema.json",
   "title": "Error",
   "description": "A human readable error message",
   "oneOf": [{ "type": "string" }, { "type": "null" }]
