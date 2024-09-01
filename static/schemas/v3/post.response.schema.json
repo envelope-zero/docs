@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://envelope-zero.org/schemas/v4/post.response.schema.json",
+  "$id": "https://envelope-zero.org/schemas/v3/post.response.schema.json",
   "title": "HTTP POST response",
   "description": "The HTTP response body for POST requests",
   "type": "object",
@@ -16,7 +16,7 @@
             "type": "object",
             "properties": {
               "error": {
-                "$ref": "https://envelope-zero.org/schemas/v4/error.schema.json"
+                "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"
               },
               "data": {
                 "description": "A single resource",
@@ -29,7 +29,7 @@
       ]
     },
     "error": {
-      "$ref": "https://envelope-zero.org/schemas/v4/error.schema.json"
+      "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"
     }
   }
 }

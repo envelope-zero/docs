@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://envelope-zero.org/schemas/v4/get-collection.response.schema.json",
+  "$id": "https://envelope-zero.org/schemas/v3/get-collection.response.schema.json",
   "title": "HTTP GET - Collection Endpoints",
   "description": "The HTTP response body for GET collection endpoints",
   "type": "object",
@@ -19,10 +19,10 @@
       ]
     },
     "error": {
-      "$ref": "https://envelope-zero.org/schemas/v4/error.schema.json"
+      "$ref": "https://envelope-zero.org/schemas/v3/error.schema.json"
     },
     "pagination": {
-      "$ref": "https://envelope-zero.org/schemas/v4/pagination.schema.json"
+      "$ref": "https://envelope-zero.org/schemas/v3/pagination.schema.json"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://envelope-zero.org/schemas/v4/pagination.schema.json",
+  "$id": "https://envelope-zero.org/schemas/v3/pagination.schema.json",
   "title": "Pagination",
   "description": "The pagination information",
   "type": "object",
