@@ -22,7 +22,6 @@ All resources share the following **read only** attributes:
 
 - `createdAt` (string): An RFC3339 timestamp of the time when the resource was created.
 - `updatedAt` (string): An RFC3339 timestamp of the time when the resource was updated.
-- `deletedAt` (string): An RFC3339 timestamp of the time when the resource was deleted. Can be null.
 - `id` (string): The UUID of the object.
 - `links` (object): A map of related resources.
   - `self` (string): The full URL of the resource itself.
